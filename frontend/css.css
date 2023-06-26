@@ -70,6 +70,8 @@
 
   .graf {
     grid-row: span 4;
+    width: 500px;
+    height: 300px;
   }
 
   .obrazek2 {
@@ -220,11 +222,6 @@
     justify-items: center;
     align-items: center;
   }
-  
-  .grid-item-1 {
-    grid-column: span 3;
-  }
-
   .items {
     display: flex;
     flex-direction: column;
