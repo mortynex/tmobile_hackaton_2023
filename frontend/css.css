@@ -1,255 +1,250 @@
-  @font-face {
-    font-family: spgrlig;
-    src: url(fonty/Space_Grotesk/static/SpaceGrotesk-Light.ttf);
-  }
-  @font-face {
-    font-family: spgrmed;
-    src: url(fonty/Space_Grotesk/static/SpaceGrotesk-Medium.ttf);
-  }
-  body {
-    font-family: spgrlig;
-    font-size: 18px;
-    margin: 0px;
-  }
+@font-face {
+	font-family: spgrlig;
+	src: url(fonty/Space_Grotesk/static/SpaceGrotesk-Light.ttf);
+}
+@font-face {
+	font-family: spgrmed;
+	src: url(fonty/Space_Grotesk/static/SpaceGrotesk-Medium.ttf);
+}
+body {
+	font-family: spgrlig;
+	font-size: 18px;
+	margin: 0px;
+}
 
-  @media only screen and (max-width: 1600px) {
-    .header .header-logo img{
-      width: 130px;
-      height: 130px;  
-  }
-  
-  .obal {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-  
-   .burger{
-    display: none;
-   }
-  
-  .header {
-    display: flex;
-    position: relative;
-    top: 0;
-    background-color: #E20074;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 130px;
-    width: 100%;
-  }
-  
-  .bar {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    gap: 60px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    justify-items: center;
-    padding: 20px;
-  }
+@media only screen and (max-width: 1600px) {
+	.header .header-logo img {
+		width: 130px;
+		height: 130px;
+	}
 
-  .nadpisy {
-    font-size: 24px;
-    font-family: spgrmed;
-    padding: 20px;
-  }
+	.obal {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+	}
 
-  .procenta {
-    font-family: spgrmed;
-    font-size: 38px;
-    padding: 20px;
-  }
+	.burger {
+		display: none;
+	}
 
-  .graf {
-    grid-row: span 4;
-    width: 500px;
-    height: 300px;
-  }
+	.header {
+		display: flex;
+		position: relative;
+		top: 0;
+		background-color: #e20074;
+		flex-direction: row;
+		justify-content: space-around;
+		height: 130px;
+		width: 100%;
+	}
 
-  .obrazek2 {
-    width: 160px;
-    height: 120px;
-  }
+	.bar {
+		display: flex;
+		position: relative;
+		flex-direction: row;
+		gap: 60px;
+		justify-content: center;
+		align-items: center;
+	}
 
-  .row {
-    grid-column: span 2;
-    justify-content: center;
-    margin-top: 30px;
-    font-family: spgrmed;
-    font-size: 40px;
-  }
-  
-  .nadpis{
-    font-size: 42px;
-  }
-  
-  .grid-item {
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-  }
-  
-  .grid-item-1 {
-    grid-column: span 3;
-  }
-  
-  .items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .nab {
-    color: white;
-    grid-column: span 3;
-    padding: 10 px;
-  }
-  
-  .nab2 {
-    color: white;
-    padding: 10px;
-  }
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: center;
+		justify-items: center;
+		padding: 20px;
+	}
 
+	.nadpisy {
+		font-size: 24px;
+		font-family: spgrmed;
+		padding: 20px;
+	}
 
-  .podnab {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100vw;
-    height: 100px;
-    background-color: #434547;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-  }
-  
-  }
+	.procenta {
+		font-family: spgrmed;
+		font-size: 38px;
+		padding: 20px;
+	}
 
-  @media (max-width: 880px) {
-    .header .header-logo img{
-      width: 130px;
-      height: 130px;  
-  }
-  
-  .item {
-    display: none;
-  }
+	.graf {
+		grid-row: span 4;
+		width: 500px;
+		height: 300px;
+	}
 
-  .obal {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .header {
-    display: flex;
-    position: relative;
-    top: 0;
-    background-color: #E20074;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 130px;
-    width: 100%;
-  }
-  
-  .bar {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    gap: 60px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    justify-items: center;
-    padding: 20px;
-  }
+	.obrazek2 {
+		width: 160px;
+	}
 
-  .nadpisy {
-    font-size: 16px;
-    font-family: spgrmed;
-    padding: 20px;
-  }
+	.row {
+		grid-column: span 2;
+		justify-content: center;
+		margin-top: 30px;
+		font-family: spgrmed;
+		font-size: 40px;
+	}
 
-  .procenta {
-    font-family: spgrmed;
-    font-size: 24px;
-    padding: 20px;
-  }
+	.nadpis {
+		font-size: 42px;
+	}
 
-  .graf {
-    width: 200px;
-    height: 120px;
-  }
+	.grid-item {
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
+	}
 
-  .obrazek2 {
-    width: 160px;
-    height: 120px;
-  }
+	.grid-item-1 {
+		grid-column: span 3;
+	}
 
-  .row {
-    justify-content: center;
-    margin-top: 30px;
-    font-family: spgrmed;
-    font-size: 24px;
-  }
-  
-  .nadpis{
-    font-size: 24px;
-  }
-  
-  .textdov {
-    margin-left: 20px;
-    margin-right: 20px;
-    bottom: 70px;
-  }
-  
-  .grid-item {
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-  }
-  .items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .nab {
-    color: white;
-    grid-column: span 3;
-    padding: 10 px;
-  }
-  
-  .nab2 {
-    color: white;
-    padding: 10px;
-  }
+	.items {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 
+	.nab {
+		color: white;
+		grid-column: span 3;
+		padding: 10 px;
+	}
 
-  .podnab {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    width: 100vw;
-    height: 100px;
-    background-color: #434547;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-  }
+	.nab2 {
+		color: white;
+		padding: 10px;
+	}
+
+	.podnab {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		width: 100vw;
+		height: 100px;
+		background-color: #434547;
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+@media (max-width: 880px) {
+	.header .header-logo img {
+		width: 130px;
+		height: 130px;
+	}
+
+	.item {
+		display: none;
+	}
+
+	.obal {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.header {
+		display: flex;
+		position: relative;
+		top: 0;
+		background-color: #e20074;
+		flex-direction: row;
+		justify-content: space-around;
+		height: 130px;
+		width: 100%;
+	}
+
+	.bar {
+		display: flex;
+		position: relative;
+		flex-direction: row;
+		gap: 60px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		justify-content: center;
+		justify-items: center;
+		padding: 20px;
+	}
+
+	.nadpisy {
+		font-size: 16px;
+		font-family: spgrmed;
+		padding: 20px;
+	}
+
+	.procenta {
+		font-family: spgrmed;
+		font-size: 24px;
+		padding: 20px;
+	}
+
+	.graf {
+		width: 200px;
+		height: 120px;
+	}
+
+	.obrazek2 {
+		width: 160px;
+	}
+
+	.row {
+		justify-content: center;
+		margin-top: 30px;
+		font-family: spgrmed;
+		font-size: 24px;
+	}
+
+	.nadpis {
+		font-size: 24px;
+	}
+
+	.textdov {
+		margin-left: 20px;
+		margin-right: 20px;
+		bottom: 70px;
+	}
+
+	.grid-item {
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
+	}
+	.items {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.nab {
+		color: white;
+		grid-column: span 3;
+		padding: 10 px;
+	}
+
+	.nab2 {
+		color: white;
+		padding: 10px;
+	}
+
+	.podnab {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		width: 100vw;
+		height: 100px;
+		background-color: #434547;
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
+		position: absolute;
+		bottom: 0;
+	}
 }

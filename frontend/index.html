@@ -1,89 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statistikoměr</title>
-    <link rel="stylesheet" href="css.css">
-    <link rel="reset" href="reset.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <header class="header">
-        <div class="header-logo">
-            <img src="./obrazky/logo1.png" alt="" srcset="">
-        </div>
-        <nav class="bar">
-            <div class="item"><a href="index.html", style="color: white; text-decoration: none">JEDNOTLIVÉ STÁNKY</a></div>
-            <div class="item"><a href="index2.html", style="color: white; text-decoration: none">HISTORIE</a></div>
-            <div class="item"><a href="index3.html", style="color: white; text-decoration: none">PODPORA</a></div>
-            <div class="burger"><img src="./obrazky/burger.png" alt="" srcset=""></div>
-        </nav>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Statistikoměr</title>
+		<link rel="stylesheet" href="css.css" />
+		<link rel="reset" href="reset.css" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script src="script.js" type="module"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-logo">
+				<img src="./obrazky/logo1.png" alt="" srcset="" />
+			</div>
+			<nav class="bar">
+				<div class="item">
+					<a href="index.html" , style="color: white; text-decoration: none"
+						>JEDNOTLIVÉ STÁNKY</a
+					>
+				</div>
+				<div class="item">
+					<a href="index2.html" , style="color: white; text-decoration: none"
+						>HISTORIE</a
+					>
+				</div>
+				<div class="item">
+					<a href="index3.html" , style="color: white; text-decoration: none"
+						>PODPORA</a
+					>
+				</div>
+				<div class="burger">
+					<img src="./obrazky/burger.png" alt="" srcset="" />
+				</div>
+			</nav>
+		</header>
 
-    <div class="grid">
-        <div class="nadpisy">
-            AKTUÁLNÍ VYTÍŽENOST
-        </div>
-        <div class="nadpisy"> 
-            PRŮMĚRNÁ VYTÍŽENOST PRODEJNY
-        </div>
-        <div class="procenta">
-            64%
-        </div>
-        <div class="graf">
-            <canvas id="myChart" width="500" height="300"></canvas>
-            <script>            
-                var data = [14, 6];
+		<div class="grid">
+			<div class="nadpisy">AKTUÁLNÍ VYTÍŽENOST</div>
+			<div class="nadpisy">PRŮMĚRNÁ VYTÍŽENOST PRODEJNY</div>
+			<div class="procenta"><span id="curr">0</span>%</div>
+			<div class="graf">
+				<canvas id="myChart" width="500" height="300"></canvas>
+			</div>
+			<div class="nadpisy">NEJOBLÍBENĚJŠÍ STÁNEK</div>
+			<div>
+				<img
+					id="apple"
+					style="display: none"
+					class="obrazek2"
+					src="obrazky/apple.webp"
+				/>
+				<img
+					id="samsung"
+					style="display: none"
+					class="obrazek2"
+					src="obrazky/samsung.webp"
+				/>
+			</div>
+			<div></div>
+			<div class="nadpisy">
+				PRŮMĚRNÝ ČAS STRÁVENÝ NA PRODEJNĚ: <span id="avgTime">0 minut</span>
+			</div>
+			<div></div>
+			<div class="row">
+				DENNÍ POČET NÁVŠTĚVNÍKŮ: <span id="currPpl">0</span>
+			</div>
+		</div>
 
-                var ctx = document.getElementById('myChart').getContext('2d');
-                var myChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Zóna Apple', 'Zóna Samsung'],
-                        datasets: [{
-                            label: 'Počet návštěvníků v dané zóně',
-                            data: data,
-                            backgroundColor: "rgb(226, 0, 98)" 
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                max: 20 
-                            }
-                        }
-                    }
-                });
-            </script>
-        </div>
-        <div class="nadpisy">
-            NEJOBLÍBENĚJŠÍ STÁNEK
-        </div>
-        <div>
-            <img class="obrazek2" src="obrazky/apple.webp">
-        </div>
-        <div>
-            
-        </div>
-        <div class="nadpisy">             
-            PRŮMĚRNÝ ČAS STRÁVENÝ NA PRODEJNĚ: 14 MINUT
-        </div>
-        <div>
-
-        </div>
-        <div class="row">
-            AKTUÁLNÍ POČET NÁVŠTĚVNÍKŮ: 26
-        </div>
-    </div>
-    
-
-    <div class="podnab">
-        <div class="nab">KONTAKT NA PRODEJNU</div>
-        <div class="nab">PRODUKTY</div>
-        <div class="nab2">© 2004-2023 T-Mobile Czech Republic a.s.</div>
-    </div>
-</body>
+		<div class="podnab">
+			<div class="nab">KONTAKT NA PRODEJNU</div>
+			<div class="nab">PRODUKTY</div>
+			<div class="nab2">?</div>
+		</div>
+	</body>
 </html>
