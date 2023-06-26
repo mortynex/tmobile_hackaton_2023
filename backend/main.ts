@@ -5,7 +5,7 @@ import { PrismaClient } from "@prisma/client";
 let currentVisitors = 0;
 let countA = 0;
 let countB = 0;
-let updated = false;
+let updated = true;
 
 const prisma = new PrismaClient();
 const app = express();
@@ -19,9 +19,6 @@ app.get("/data", async (req, res) => {
 		Connection: "keep-alive",
 	});
 	res.flushHeaders();
-
-	updated = false;
-
 	res.write("retry: 10000\n\n");
 
 	const sendUpdate = async () => {
@@ -50,8 +47,10 @@ app.get("/data", async (req, res) => {
 	sendUpdate();
 
 	setInterval(() => {
-		if (updated) {
+		if (!updated) {
 			sendUpdate();
+
+			updated = true;
 		}
 	}, 500);
 });
@@ -88,7 +87,7 @@ app.post("/detail", async (req, res) => {
 		},
 	});
 
-	updated = true;
+	updated = false;
 
 	console.log(await prisma.visit.findMany());
 
