@@ -86,9 +86,8 @@ app.post("/detail", async (req, res) => {
 				id,
 			},
 		});
+		updated = false;
 	}
-
-	updated = false;
 
 	console.log(await prisma.visit.findMany());
 
