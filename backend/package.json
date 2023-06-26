@@ -2,7 +2,7 @@
 	"scripts": {
 		"serve": "ts-node main.ts",
 		"db": "npx prisma migrate dev --name init",
-		"build": "tsc",
+		"build": "npm db && tsc",
 		"start": "node build/main.js"
 	},
 	"devDependencies": {
