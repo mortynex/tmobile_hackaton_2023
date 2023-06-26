@@ -57,7 +57,7 @@ body {
 	}
 
 	.nadpisy {
-		font-size: 24px;
+		font-size: 20px;
 		font-family: spgrmed;
 		padding: 20px;
 	}
@@ -81,9 +81,9 @@ body {
 	.row {
 		grid-column: span 2;
 		justify-content: center;
-		margin-top: 30px;
+		margin-top: 10px;
 		font-family: spgrmed;
-		font-size: 40px;
+		font-size: 24px;
 	}
 
 	.nadpis {
@@ -128,6 +128,7 @@ body {
 		align-items: center;
 		position: absolute;
 		bottom: 0;
+		padding: 10px;
 	}
 }
 
@@ -165,6 +166,9 @@ body {
 		gap: 60px;
 		justify-content: center;
 		align-items: center;
+	}
+	.burger {
+		display: flex;
 	}
 
 	.grid {
@@ -244,7 +248,8 @@ body {
 		justify-content: center;
 		justify-items: center;
 		align-items: center;
-		position: absolute;
+		position: relative;
 		bottom: 0;
+		padding: 10px;
 	}
 }

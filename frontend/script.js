@@ -18,7 +18,7 @@ const getStringFromSeconds = (seconds) => {
 		res += minutes + " minut ";
 	}
 
-	res += (parseInt(seconds) % 60) + " sekund";
+	res += (parseInt(seconds) % 60) + " SEKUND";
 
 	return res;
 };
@@ -37,19 +37,21 @@ evtSource.addEventListener("message", function (event) {
 	apple.style.display = !isFavoriteB ? "block" : "none";
 });
 
-const data = [50, 30, 70, 20, 80, 60];
 
-// Nastavení sloupcového grafu
+
+const data = [14, 8];
+
+
 const ctx = document.getElementById("myChart").getContext("2d");
 const myChart = new Chart(ctx, {
 	type: "bar",
 	data: {
-		labels: ["9-11", "11-13", "13-15", "15-17", "17-19", "19-21"],
+		labels: ["Zóna Apple", "Zóna Samsung"],
 		datasets: [
 			{
-				label: "Hodnoty",
+				label: "Počet návštěvníků v zóně",
 				data: data,
-				backgroundColor: "rgba(0, 123, 255, 0.5)", // Barva sloupců
+				backgroundColor: "rgb(226, 0, 98)",
 			},
 		],
 	},
@@ -57,7 +59,7 @@ const myChart = new Chart(ctx, {
 		scales: {
 			y: {
 				beginAtZero: true,
-				max: 100, // Maximální hodnota na ose Y
+				max: 20, 
 			},
 		},
 	},
