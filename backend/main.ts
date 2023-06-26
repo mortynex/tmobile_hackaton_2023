@@ -101,4 +101,6 @@ app.post("/current", async (req, res) => {
 	res.sendStatus(200);
 });
 
-const server = app.listen(3034);
+app.listen(process.env.PORT || 3034, () => {
+	console.log(`running on port ${process.env.PORT || 3034}`);
+});
