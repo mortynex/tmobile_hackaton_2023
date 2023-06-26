@@ -101,6 +101,12 @@ app.post("/current", async (req, res) => {
 	res.sendStatus(200);
 });
 
-app.listen(process.env.PORT || 3034, () => {
-	console.log(`running on port ${process.env.PORT || 3034}`);
-});
+if (process.env.NODE_ENV === "production") {
+	app.listen((process.env.PORT as any) || 3034, "0.0.0.0", () => {
+		console.log(`running on port ${process.env.PORT || 3034}`);
+	});
+} else {
+	app.listen(process.env.PORT || 3034, () => {
+		console.log(`running on port ${process.env.PORT || 3034}`);
+	});
+}
