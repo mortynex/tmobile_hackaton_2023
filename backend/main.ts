@@ -72,7 +72,7 @@ body: {
 
 app.post("/detail", async (req, res) => {
 	const details: Record<string, Record<any, any>> = req.body;
-	console.log({ details });
+
 	for (const [id, detail] of Object.entries(details)) {
 		await prisma.visit.upsert({
 			where: {
@@ -83,6 +83,7 @@ app.post("/detail", async (req, res) => {
 			},
 			create: {
 				...(detail as any),
+				id,
 			},
 		});
 	}
