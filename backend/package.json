@@ -1,7 +1,9 @@
 {
 	"scripts": {
 		"serve": "ts-node main.ts",
-		"db": "npx prisma migrate dev --name init"
+		"db": "npx prisma migrate dev --name init",
+		"build": "tsc",
+		"start": "node build/main.js"
 	},
 	"devDependencies": {
 		"@types/node": "^20.3.1",

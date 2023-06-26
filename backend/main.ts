@@ -10,7 +10,7 @@ const prisma = new PrismaClient();
 const app = express();
 
 app.use(express.json());
-app.get("/listen", async (req, res) => {
+app.get("/data", async (req, res) => {
 	res.set({
 		"Cache-Control": "no-cache",
 		"Content-Type": "text/event-stream",
@@ -22,13 +22,32 @@ app.get("/listen", async (req, res) => {
 
 	res.write("retry: 10000\n\n");
 
-	const sendUpdate = () => {
-		const data = {};
+	const sendUpdate = async () => {
+		const { _avg, _count } = await prisma.visit.aggregate({
+			_avg: {
+				totalTime: true,
+			},
+			_count: {
+				zoneATime: true,
+				zoneBTime: true,
+			},
+		});
+
+		const data = {
+			currentVisitors,
+			countA,
+			countB,
+			totalVisits: prisma.visit.count(),
+			averageTime: _avg.totalTime,
+			favoriteZone: _count.zoneATime > _count.zoneBTime ? "A" : "B",
+		};
+
+		res.write(`data: ${JSON.stringify(data)}\n\n`);
 	};
 
 	setInterval(() => {
 		if (updated) {
-			res.write(`data: \n\n`);
+			sendUpdate();
 		}
 	}, 500);
 });
