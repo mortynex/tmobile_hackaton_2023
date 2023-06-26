@@ -45,6 +45,8 @@ app.get("/data", async (req, res) => {
 		res.write(`data: ${JSON.stringify(data)}\n\n`);
 	};
 
+	sendUpdate();
+
 	setInterval(() => {
 		if (updated) {
 			sendUpdate();
