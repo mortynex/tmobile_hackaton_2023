@@ -12,6 +12,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+
 app.get("/data", async (req, res) => {
 	res.set({
 		"Cache-Control": "no-cache",
@@ -81,7 +82,6 @@ app.post("/detail", async (req, res) => {
 				...detail,
 			},
 			create: {
-				id,
 				...(detail as any),
 			},
 		});
