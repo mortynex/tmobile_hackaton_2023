@@ -36,7 +36,7 @@ app.get("/data", async (req, res) => {
 			currentVisitors,
 			countA,
 			countB,
-			totalVisits: prisma.visit.count(),
+			totalVisits: await prisma.visit.count(),
 			averageTime: _avg.totalTime,
 			favoriteZone: _count.zoneATime > _count.zoneBTime ? "A" : "B",
 		};
