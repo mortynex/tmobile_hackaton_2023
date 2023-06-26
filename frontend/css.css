@@ -12,244 +12,132 @@ body {
 	margin: 0px;
 }
 
-@media only screen and (max-width: 1600px) {
-	.header .header-logo img {
-		width: 130px;
-		height: 130px;
-	}
-
-	.obal {
-		display: flex;
-		width: 100%;
-		justify-content: center;
-	}
-
-	.burger {
-		display: none;
-	}
-
-	.header {
-		display: flex;
-		position: relative;
-		top: 0;
-		background-color: #e20074;
-		flex-direction: row;
-		justify-content: space-around;
-		height: 130px;
-		width: 100%;
-	}
-
-	.bar {
-		display: flex;
-		position: relative;
-		flex-direction: row;
-		gap: 60px;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		justify-content: center;
-		justify-items: center;
-		padding: 20px;
-	}
-
-	.nadpisy {
-		font-size: 20px;
-		font-family: spgrmed;
-		padding: 20px;
-	}
-
-	.procenta {
-		font-family: spgrmed;
-		font-size: 38px;
-		padding: 20px;
-	}
-
-	.graf {
-		grid-row: span 4;
-		width: 500px;
-		height: 300px;
-	}
-
-	.obrazek2 {
-		width: 160px;
-	}
-
-	.row {
-		grid-column: span 2;
-		justify-content: center;
-		margin-top: 10px;
-		font-family: spgrmed;
-		font-size: 24px;
-	}
-
-	.nadpis {
-		font-size: 42px;
-	}
-
-	.grid-item {
-		justify-content: center;
-		justify-items: center;
-		align-items: center;
-	}
-
-	.grid-item-1 {
-		grid-column: span 3;
-	}
-
-	.items {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	.nab {
-		color: white;
-		grid-column: span 3;
-		padding: 10 px;
-	}
-
-	.nab2 {
-		color: white;
-		padding: 10px;
-	}
-
-	.podnab {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		width: 100vw;
-		height: 100px;
-		background-color: #434547;
-		justify-content: center;
-		justify-items: center;
-		align-items: center;
-		position: absolute;
-		bottom: 0;
-		padding: 10px;
-	}
+.subgrid {
+	display: grid;
 }
 
-@media (max-width: 880px) {
-	.header .header-logo img {
-		width: 130px;
-		height: 130px;
-	}
+.subgrid {
+	text-align: center;
+}
 
-	.item {
-		display: none;
-	}
+.subgrid > .zony {
+	display: flex;
+	justify-content: center;
+}
+.header .header-logo img {
+	width: 130px;
+	height: 130px;
+}
 
-	.obal {
-		display: flex;
-		width: 100%;
-		justify-content: center;
-	}
+.obal {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
 
-	.header {
-		display: flex;
-		position: relative;
-		top: 0;
-		background-color: #e20074;
-		flex-direction: row;
-		justify-content: space-around;
-		height: 130px;
-		width: 100%;
-	}
+.burger {
+	display: none;
+}
 
-	.bar {
-		display: flex;
-		position: relative;
-		flex-direction: row;
-		gap: 60px;
-		justify-content: center;
-		align-items: center;
-	}
-	.burger {
-		display: flex;
-	}
+.header {
+	display: flex;
+	position: relative;
+	top: 0;
+	background-color: #e20074;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 130px;
+	width: 100%;
+}
 
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		justify-content: center;
-		justify-items: center;
-		padding: 20px;
-	}
+.bar {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	gap: 60px;
+	justify-content: center;
+	align-items: center;
+}
 
-	.nadpisy {
-		font-size: 16px;
-		font-family: spgrmed;
-		padding: 20px;
-	}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	justify-content: center;
+	justify-items: center;
+	padding: 20px;
+}
 
-	.procenta {
-		font-family: spgrmed;
-		font-size: 24px;
-		padding: 20px;
-	}
+.nadpisy {
+	font-size: 20px;
+	font-family: spgrmed;
+	padding: 20px;
+}
 
-	.graf {
-		width: 200px;
-		height: 120px;
-	}
+.procenta {
+	font-family: spgrmed;
+	font-size: 38px;
+	padding: 20px;
+}
 
-	.obrazek2 {
-		width: 160px;
-	}
+.graf {
+	grid-row: span 4;
+	width: 500px;
+	height: 300px;
+}
 
-	.row {
-		justify-content: center;
-		margin-top: 30px;
-		font-family: spgrmed;
-		font-size: 24px;
-	}
+.obrazek2 {
+	width: 160px;
+}
 
-	.nadpis {
-		font-size: 24px;
-	}
+.row {
+	grid-column: span 2;
+	justify-content: center;
+	margin-top: 10px;
+	font-family: spgrmed;
+	font-size: 24px;
+}
 
-	.textdov {
-		margin-left: 20px;
-		margin-right: 20px;
-		bottom: 70px;
-	}
+.nadpis {
+	font-size: 42px;
+}
 
-	.grid-item {
-		justify-content: center;
-		justify-items: center;
-		align-items: center;
-	}
-	.items {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
+.grid-item {
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+}
 
-	.nab {
-		color: white;
-		grid-column: span 3;
-		padding: 10 px;
-	}
+.grid-item-1 {
+	grid-column: span 3;
+}
 
-	.nab2 {
-		color: white;
-		padding: 10px;
-	}
+.items {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
-	.podnab {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		width: 100vw;
-		height: 100px;
-		background-color: #434547;
-		justify-content: center;
-		justify-items: center;
-		align-items: center;
-		position: relative;
-		bottom: 0;
-		padding: 10px;
-	}
+.nab {
+	color: white;
+	grid-column: span 3;
+	padding: 10 px;
+}
+
+.nab2 {
+	color: white;
+	padding: 10px;
+}
+
+.podnab {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	width: 100vw;
+	height: 100px;
+	background-color: #434547;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	padding: 10px;
 }

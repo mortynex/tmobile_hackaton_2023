@@ -38,35 +38,41 @@
 		</header>
 
 		<div class="grid">
-			<div class="nadpisy">AKTUÁLNÍ VYTÍŽENOST</div>
-			<div class="nadpisy">PRŮMĚRNÁ VYTÍŽENOST PRODEJNY</div>
-			<div class="procenta"><span id="curr">0</span>%</div>
-			<div class="graf">
-				<canvas id="myChart" width="500" height="300"></canvas>
+			<div class="subgrid">
+				<div class="nadpisy">AKTUÁLNÍ VYTÍŽENOST</div>
+				<div class="procenta"><span id="curr">0</span>%</div>
+
+				<div class="nadpisy">NEJOBLÍBENĚJŠÍ STÁNEK</div>
+				<div class="zony">
+					<img
+						id="apple"
+						style="display: block"
+						class="obrazek2"
+						src="obrazky/apple.webp"
+					/>
+					<img
+						id="samsung"
+						style="display: none"
+						class="obrazek2"
+						src="obrazky/samsung.webp"
+					/>
+				</div>
+				<div class="nadpisy">
+					PRŮMĚRNÝ ČAS STRÁVENÝ NA PRODEJNĚ: <span id="avgTime">0 MINUT</span>
+				</div>
 			</div>
-			<div class="nadpisy">NEJOBLÍBENĚJŠÍ STÁNEK</div>
-			<div>
-				<img
-					id="apple"
-					style="display: block"
-					class="obrazek2"
-					src="obrazky/apple.webp"
-				/>
-				<img
-					id="samsung"
-					style="display: none"
-					class="obrazek2"
-					src="obrazky/samsung.webp"
-				/>
+
+			<div class="subgrid">
+				<div class="nadpisy">PRŮMĚRNÁ VYTÍŽENOST PRODEJNY</div>
+
+				<div class="graf">
+					<canvas id="myChart" width="500" height="300"></canvas>
+				</div>
 			</div>
-			<div></div>
-			<div class="nadpisy">
-				PRŮMĚRNÝ ČAS STRÁVENÝ NA PRODEJNĚ: <span id="avgTime">0 MINUT</span>
-			</div>
-			<div></div>
-			<div class="row">
-				DENNÍ POČET NÁVŠTĚVNÍKŮ: <span id="currPpl">0</span>
-			</div>
+		</div>
+
+		<div class="row" style="text-align: center">
+			DENNÍ POČET NÁVŠTĚVNÍKŮ: <span id="currPpl">0</span>
 		</div>
 
 		<div class="podnab">
