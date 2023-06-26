@@ -12,6 +12,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+
 app.get("/data", async (req, res) => {
 	res.set({
 		"Cache-Control": "no-cache",
@@ -70,22 +71,22 @@ body: {
 */
 
 app.post("/detail", async (req, res) => {
-	const data = req.body;
-	const id = data.id;
+	const details: Record<string, Record<any, any>> = req.body;
 
-	data[id] = undefined;
-
-	await prisma.visit.upsert({
-		where: {
-			id: data.id,
-		},
-		update: {
-			...data,
-		},
-		create: {
-			...data,
-		},
-	});
+	for (const [id, detail] of Object.entries(details)) {
+		await prisma.visit.upsert({
+			where: {
+				id,
+			},
+			update: {
+				...detail,
+			},
+			create: {
+				...(detail as any),
+				id,
+			},
+		});
+	}
 
 	updated = false;
 
