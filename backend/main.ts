@@ -55,7 +55,7 @@ app.get("/data", async (req, res) => {
 
 			updated = true;
 		}
-	}, 500);
+	}, 250);
 });
 
 /*
