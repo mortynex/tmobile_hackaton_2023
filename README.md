@@ -11,7 +11,7 @@ Repozitář hackaton projektu pro monitorování zákázníků na prodejnách T-
 **presentation.pptx** - prezentace produktu
 
 ## Kontaktní informace
-Martin Polťák - https://www.linkedin.com/in/martin-pol%C5%A5%C3%A1k-720275281/ <br>
+Martin Polťák - https://www.linkedin.com/in/martinpoltak/ <br>
 Anna Bučinska - https://cz.linkedin.com/in/anna-bu%C4%8Dinsk%C3%A1-2276911b7 <br>
 Jan Schubert - https://cz.linkedin.com/in/jan-schubert-61410730 <br>
 Jan Kratochvíle - https://cz.linkedin.com/in/jan-kratochv%C3%ADle-87a642250?trk=people-guest_people_search-card <br>
