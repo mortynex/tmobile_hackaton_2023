@@ -10,6 +10,8 @@ let updated = true;
 const prisma = new PrismaClient();
 const app = express();
 
+prisma.visit.deleteMany({});
+
 app.use(express.json());
 app.use(cors());
 

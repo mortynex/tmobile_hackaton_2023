@@ -1,3 +1,28 @@
+const data = [0, 0];
+
+const ctx = document.getElementById("myChart").getContext("2d");
+const myChart = new Chart(ctx, {
+	type: "bar",
+	data: {
+		labels: ["Zóna Apple", "Zóna Samsung"],
+		datasets: [
+			{
+				label: "Počet návštěvníků v zóně",
+				data: data,
+				backgroundColor: "rgb(226, 0, 98)",
+			},
+		],
+	},
+	options: {
+		scales: {
+			y: {
+				beginAtZero: true,
+				max: 20,
+			},
+		},
+	},
+});
+
 const evtSource = new EventSource("https://tmobile.up.railway.app/data");
 
 const vytizenost = document.getElementById("curr");
@@ -26,8 +51,14 @@ const getStringFromSeconds = (seconds) => {
 
 evtSource.addEventListener("message", function (event) {
 	console.log(event.data);
-	const { currentVisitors, averageTime, favoriteZone, totalVisits } =
-		JSON.parse(event.data);
+	const {
+		currentVisitors,
+		averageTime,
+		favoriteZone,
+		totalVisits,
+		countA,
+		countB,
+	} = JSON.parse(event.data);
 
 	vytizenost.textContent = parseInt((currentVisitors / 10) * 100);
 
@@ -39,29 +70,7 @@ evtSource.addEventListener("message", function (event) {
 	apple.style.display = !isFavoriteB ? "block" : "none";
 
 	currPpl.textContent = totalVisits;
-});
 
-const data = [14, 8];
-
-const ctx = document.getElementById("myChart").getContext("2d");
-const myChart = new Chart(ctx, {
-	type: "bar",
-	data: {
-		labels: ["Zóna Apple", "Zóna Samsung"],
-		datasets: [
-			{
-				label: "Počet návštěvníků v zóně",
-				data: data,
-				backgroundColor: "rgb(226, 0, 98)",
-			},
-		],
-	},
-	options: {
-		scales: {
-			y: {
-				beginAtZero: true,
-				max: 20,
-			},
-		},
-	},
+	myChart.data = [countA, countB];
+	myChart.update();
 });
