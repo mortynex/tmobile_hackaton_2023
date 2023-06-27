@@ -8,7 +8,7 @@ const myChart = new Chart(ctx, {
 		datasets: [
 			{
 				label: "Počet návštěvníků v zóně",
-				data: data,
+				data: [1, 3],
 				backgroundColor: "rgb(226, 0, 98)",
 			},
 		],
@@ -71,13 +71,7 @@ evtSource.addEventListener("message", function (event) {
 
 	currPpl.textContent = totalVisits;
 
-	myChart.data.datasets.forEach((dataset) => {
-		dataset.data.pop();
-	});
-
-	myChart.data.datasets.forEach((dataset) => {
-		dataset.data.push([countA, countB]);
-	});
+	myChart.data.datasets[0].data = [countA, countB];
 
 	myChart.options.scales.y = {
 		max: Math.max(countA, countB) + 1,
